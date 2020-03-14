@@ -13,7 +13,7 @@
     ];
 
     xdg.configFile."direnv/direnvrc".text = ''
-        export DIRENV_LOG_FORMAT=""
+        #export DIRENV_LOG_FORMAT=""
     '';
 
     programs.direnv = {
@@ -38,8 +38,8 @@
         };
 
         localVariables = {
-            POWERLEVEL9K_LEFT_PROMPT_ELEMENTS = ["os_icon" "dir" "vcs" "newline" "status" ];
-            POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS = ["direnv" "asdf" "pyenv" "rbenv" "nodenv" ];
+            POWERLEVEL9K_LEFT_PROMPT_ELEMENTS = ["os_icon" "dir" "vcs" "newline" "status"];
+            POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS = ["direnv" "asdf" "pyenv" "rbenv" "nodenv" "nix_shell"];
             POWERLEVEL9K_SHOW_CHANGESET = false;
             POWERLEVEL9K_VCS_HIDE_TAGS = true;
             POWERLEVEL9K_MODE = "nerdfont-complete";
