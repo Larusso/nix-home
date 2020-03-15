@@ -15,6 +15,6 @@
         enable-ssh-support
         default-cache-ttl 600
         max-cache-ttl 7200
-        pinentry-program ${pkgs.pinentry_mac}/Applications/pinentry-mac.app/Contents/MacOS/pinentry-mac
+        pinentry-program ${pkgs.pinentry_mac}/${pkgs.pinentry_mac.binaryPath}
     '';
 }
