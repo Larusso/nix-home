@@ -16,6 +16,17 @@
         #export DIRENV_LOG_FORMAT=""
     '';
 
+    programs.ssh = {
+        enable = true;
+
+        extraOptionOverrides = {
+            UseKeychain = "yes";
+            ControlMaster = "auto";
+            ControlPath =  "/tmp/ssh_mux_%h_%p_%r";
+            ControlPersist = "60m";
+        };
+    };
+
     programs.direnv = {
         enable = true;
         enableZshIntegration = true;
@@ -88,6 +99,8 @@
                 editor = "${pkgs.vim}/bin/vim";
                 commitGraph = true;
             };
+
+            user.useConfigOnly = true;
             push.default = "current";
             merge.tool = "opendiff";
             color.ui = "auto";
