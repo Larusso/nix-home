@@ -26,10 +26,11 @@
             ControlPersist = "60m";
         };
 
-        # extraConfig = ''
-        #     AddKeysToAgent yes
-        #     UseKeychain yes
-        # '';
+        extraConfig = ''
+            IgnoreUnknown UseKeychain
+            AddKeysToAgent yes
+            UseKeychain yes
+        '';
 
         matchBlocks = {
             "10.211.55.*" = {
