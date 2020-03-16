@@ -10,6 +10,7 @@
         pkgs.zsh-powerlevel10k
         pkgs.fastlane
         pkgs._1password
+        pkgs.heroku
     ];
 
     xdg.configFile."direnv/direnvrc".text = ''
