@@ -19,12 +19,32 @@
 
     programs.ssh = {
         enable = true;
-
+        
         extraOptionOverrides = {
-            UseKeychain = "yes";
             ControlMaster = "auto";
             ControlPath =  "/tmp/ssh_mux_%h_%p_%r";
             ControlPersist = "60m";
+        };
+
+        # extraConfig = ''
+        #     AddKeysToAgent yes
+        #     UseKeychain yes
+        # '';
+
+        matchBlocks = {
+            "10.211.55.*" = {
+                identityFile = "/dev/null";
+                extraOptions = {
+                    StrictHostKeyChecking = "no";
+                };
+            };
+
+            "10.103.36.*" = {
+                identityFile = "/dev/null";
+                extraOptions = {
+                    StrictHostKeyChecking = "no";
+                };
+            };
         };
     };
 
