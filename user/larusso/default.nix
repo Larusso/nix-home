@@ -21,13 +21,13 @@
         enable = true;
         
         extraOptionOverrides = {
+            IgnoreUnknown = "UseKeychain";
             ControlMaster = "auto";
             ControlPath =  "/tmp/ssh_mux_%h_%p_%r";
             ControlPersist = "60m";
         };
 
         extraConfig = ''
-            IgnoreUnknown UseKeychain
             AddKeysToAgent yes
             UseKeychain yes
         '';
