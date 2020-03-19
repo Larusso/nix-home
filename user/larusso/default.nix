@@ -2,15 +2,15 @@
 
 {
     home.packages = [
+        pkgs.nixfmt
+
         pkgs.exa
         pkgs.direnv
         pkgs.rustup
         pkgs.oh-my-zsh
         pkgs.ripgrep
         pkgs.zsh-powerlevel10k
-        pkgs.fastlane
         pkgs._1password
-        pkgs.heroku
     ];
 
     xdg.configFile."direnv/direnvrc".text = ''
@@ -31,22 +31,6 @@
             AddKeysToAgent yes
             UseKeychain yes
         '';
-
-        matchBlocks = {
-            "10.211.55.*" = {
-                identityFile = "/dev/null";
-                extraOptions = {
-                    StrictHostKeyChecking = "no";
-                };
-            };
-
-            "10.103.36.*" = {
-                identityFile = "/dev/null";
-                extraOptions = {
-                    StrictHostKeyChecking = "no";
-                };
-            };
-        };
     };
 
     programs.direnv = {
