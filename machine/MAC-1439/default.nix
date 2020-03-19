@@ -1,15 +1,22 @@
 { config, lib, pkgs, ... }:
 
 {
+  imports = [
+    ../../program/terminal/aws
+  ];
+
   nixpkgs.config.allowUnfree = true;
 
   home.packages = [
+    pkgs.awscli
     pkgs.heroku
     pkgs.fastlane
+
     # gradle
     pkgs.gradle_4
     pkgs.gradle-completion
     # pkgs.gdub
+    pkgs.adoptopenjdk-hotspot-bin-8
   ];
 
   programs.ssh = {
