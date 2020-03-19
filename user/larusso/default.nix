@@ -7,7 +7,6 @@
     pkgs.exa
     pkgs.direnv
     pkgs.rustup
-    pkgs.oh-my-zsh
     pkgs.ripgrep
     pkgs.zsh-powerlevel10k
     pkgs._1password
@@ -71,8 +70,6 @@
     initExtra = ''
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
     '';
-
-    oh-my-zsh = { enable = false; };
 
     shellAliases = {
       gg = "git status -s";
