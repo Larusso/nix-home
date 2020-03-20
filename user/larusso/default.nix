@@ -128,12 +128,9 @@
       "fco" = "!git co $(git branch | fzf)";
       "lg" = ''!"git lg1"'';
       "graph" = ''!"git lg"'';
-      "lg1" = ''
-        !sh -c "git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' $*"'';
-      "lg2" =
-        "!sh -c \"git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' $*\"";
-      "lg3" =
-        "!sh -c \"git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)' $*\"";
+      "lg1" = "!sh -c \\\"git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' $*\\\"";
+      "lg2" = "!sh -c \\\"git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' $*\\\"";
+      "lg3" = "!sh -c \\\"git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)' $*\\\"";
       "prune-all" = "!git remote | xargs -n 1 git remote prune";
       "prune-merged" = "!git branch -d $(git branch --merged)";
 
@@ -148,7 +145,7 @@
       "commend" = "commit --amend --no-edit";
       "fix-message" = "commit --amend --allow-empty";
       "last-commit" = ''
-        !sh -c "git log -1 --pretty=tformat:\"%H\" --author=\"`git config user.name`\" $*"'';
+        !sh -c \"git log -1 --pretty=tformat:\\\"%H\\\" --author=\\\"`git config user.name`\\\" $*\"'';
     };
   };
 }
