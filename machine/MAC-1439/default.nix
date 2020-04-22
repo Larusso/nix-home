@@ -12,11 +12,17 @@
     pkgs.heroku
     pkgs.fastlane
 
+    # ssh
+    pkgs.sshpass
+
     # gradle
     pkgs.gradle_4
     pkgs.gradle-completion
-    # pkgs.gdub
+    pkgs.larussopkgs.gdub
     pkgs.adoptopenjdk-hotspot-bin-8
+
+    # unity
+    pkgs.mono6
   ];
 
   programs.ssh = {
@@ -37,7 +43,14 @@
     };
   };
 
-  programs.zsh.shellAliases = { 
-    gradle = "gw"; 
+  programs.zsh = {
+    sessionVariables = {
+      UVM_AUTO_SWITCH_UNITY_EDITOR = "YES";
+      UVM_AUTO_INSTALL_UNITY_EDITOR = "YES";
+    };
+
+    shellAliases = {
+      gradle = "gw";
+    };
   };
 }
