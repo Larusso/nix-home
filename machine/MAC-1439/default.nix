@@ -11,6 +11,7 @@
     pkgs.awscli
     pkgs.heroku
     pkgs.fastlane
+    pkgs.graphviz
 
     # ssh
     pkgs.sshpass
@@ -47,6 +48,8 @@
     sessionVariables = {
       UVM_AUTO_SWITCH_UNITY_EDITOR = "YES";
       UVM_AUTO_INSTALL_UNITY_EDITOR = "YES";
+      UVM_UNITY_INSTALL_BASE_DIR= "/Applications/Unity/Hub/Editor";
+      ANDROID_SDK_ROOT = "/usr/local/share/android-sdk";
     };
 
     shellAliases = {
