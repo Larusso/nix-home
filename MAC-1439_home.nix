@@ -14,8 +14,8 @@ in
   programs.home-manager.enable = true;
   home.stateVersion = "19.09";
   imports = [
+    ./role/darwin
     ./user/larusso
     ./machine/MAC-1439
-    ./role/darwin
   ];
 }

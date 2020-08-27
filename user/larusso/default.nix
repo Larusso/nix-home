@@ -37,7 +37,7 @@
     enableZshIntegration = true;
   };
 
-  programs.fzf = { enable = false; };
+  programs.fzf = { enable = true; };
 
   programs.zsh = {
     enable = true;
