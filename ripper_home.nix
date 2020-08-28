@@ -17,8 +17,8 @@ in
   home.stateVersion = "19.09";
 
   imports = [
+    ./role/linux_gnome
     ./user/larusso
     ./machine/ripper
-    ./role/linux
   ];
 }
