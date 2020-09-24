@@ -1,5 +1,9 @@
 { config, lib, pkgs, attrsets, ... }:
 {
+    imports = [
+        ../../program/terminal/x
+    ];
+
     nixpkgs.config.allowUnfree = true;
 
     programs.gpg = {

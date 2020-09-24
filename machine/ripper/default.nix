@@ -34,6 +34,7 @@
       UVM_AUTO_INSTALL_UNITY_EDITOR = "YES";
       UVM_UNITY_INSTALL_BASE_DIR= "/Applications/Unity/Hub/Editor";
       ANDROID_SDK_ROOT = "/usr/local/share/android-sdk";
+      PATH = "$PATH:$HOME/.local/bin";
     };
 
     shellAliases = {
