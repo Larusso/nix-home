@@ -10,8 +10,6 @@
   home.packages = [
     pkgs.git-crypt
 
-    pkgs.slack-dark
-
     pkgs.awscli
     pkgs.heroku
 
