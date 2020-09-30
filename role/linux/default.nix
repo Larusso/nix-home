@@ -28,6 +28,6 @@
         enable-ssh-support
         default-cache-ttl 600
         max-cache-ttl 7200
-        pinentry-program ${pkgs.pinentry-qt}/bin/pinentry-qt
+        pinentry-program ${pkgs.pinentry-curses}/bin/pinentry
     '';
 }

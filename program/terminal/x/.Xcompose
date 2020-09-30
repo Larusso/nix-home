@@ -1,0 +1,5 @@
+include "%L"
+
+<Multi_key> <u> <u> : "ü"
+<Multi_key> <u> <a> : "ä"
+<Multi_key> <u> <o> : "ö"
