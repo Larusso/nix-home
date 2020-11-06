@@ -3,7 +3,7 @@
 {
   home.packages = [
     pkgs.nixfmt
-
+    pkgs.git-crypt
     pkgs.exa
     pkgs.direnv
     pkgs.rustup
@@ -67,6 +67,7 @@
 
     initExtra = ''
       source ~/.nix-profile/etc/profile.d/nix.sh
+      eval "$(rbenv init -)"
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
     '';
 

@@ -11,6 +11,15 @@
         };
     };
 
+    programs.zsh = {
+        initExtra = ''
+            export GPG_TTY="$(tty)"
+            export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+            gpgconf --launch gpg-agent
+            gpg-connect-agent updatestartuptty /bye
+        '';
+    };
+
     home.file.".gnupg/gpg-agent.conf".text = ''
         enable-ssh-support
         default-cache-ttl 600
